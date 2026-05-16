@@ -67,7 +67,7 @@ El flujo de trabajo de este notebook se divide en cuatro etapas principales:
 3. Pega la URL del repositorio que contiene este notebook
 
 ### Opción 2: Cargar manualmente
-1. Descarga el archivo `Actividad13.ipynb` de esta carpeta
+1. Descarga el archivo `Week14_14_GANs.ipynb` de esta carpeta
 2. Abre [Google Colab](https://colab.research.google.com/)
 3. Selecciona **"Archivo"** → **"Subir cuaderno"**
 4. Elige el archivo descargado
