@@ -30,3 +30,25 @@ Este proyecto implementa y compara arquitecturas de Redes Neuronales Generativas
 - Resultado.png`: Muestra de la DCGAN mejorada.
 - Resultado_final.png`: Resultados tras 5000 épocas de entrenamiento.
 
+## General del Código
+
+El flujo de trabajo de este notebook se divide en cuatro etapas principales:
+
+1.  **Preprocesamiento de Datos**:
+    *   Carga de los datasets **MNIST** (dígitos) y **Fashion MNIST** (ropa).
+    *   Normalización de píxeles al rango `[-1, 1]` para optimizar el uso de la función de activación `tanh`.
+    *   Redimensionamiento de las imágenes a `(28, 28, 1)` para compatibilidad con capas convolucionales.
+
+2.  **Definición de Arquitecturas**:
+    *   **Generador (DCGAN)**: Utiliza `Conv2DTranspose` para proyectar ruido aleatorio (espacio latente) hacia una imagen completa, aplicando `BatchNormalization` para estabilidad.
+    *   **Discriminador (DCGAN)**: Un clasificador convolucional con `LeakyReLU` y `Dropout` que aprende a distinguir entre imágenes reales y generadas.
+
+3.  **Configuración del Modelo Adversario (GAN)**:
+    *   Se encadena el Generador con el Discriminador.
+    *   Al entrenar la GAN completa, se congela el Discriminador (`trainable = False`) para que solo los pesos del Generador se actualicen, aprendiendo a "engañar" al juez.
+
+4.  **Ciclo de Entrenamiento y Visualización**:
+    *   **Modularidad**: Uso de la función `train_model` para ejecutar el entrenamiento por lotes (batches).
+    *   **Evaluación**: Generación de gráficas de pérdida para monitorear el equilibrio de Nash y uso de `plot_images` para visualizar el progreso visual del modelo tras miles de épocas.
+  
+   
