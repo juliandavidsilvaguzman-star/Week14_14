@@ -57,5 +57,25 @@ El flujo de trabajo de este notebook se divide en cuatro etapas principales:
 **Aprendizaje desde el Ruido**: Al comparar las imágenes 'Sin entrenar' (que son estática pura) con los resultados a las 2000 y 5000 épocas, se evidencia que el Generador ha aprendido a mapear vectores aleatorios a estructuras espaciales con significado (dígitos y ropa).
 **Superioridad de DCGAN sobre MLP**: El código ejecutado demuestra que las capas convolucionales (Conv2DTranspose) mantienen la jerarquía espacial de la imagen, produciendo bordes más nítidos y formas menos borrosas que la versión basada únicamente en capas densas.
 **Capacidad de Generalización**: Al aplicar la misma arquitectura a Fashion MNIST, el código evidencia que la lógica de las DCGAN es versátil y puede adaptarse a diferentes distribuciones de datos (de números a prendas de vestir) ajustando simplemente el flujo de entrada.
-  
+
+
+  ## Cómo Ejecutar en Colab
+
+### Opción 1: Cargar desde GitHub
+1. Abre [Google Colab](https://colab.research.google.com/)
+2. Selecciona **"Archivo"** → **"Abrir cuaderno"** → **"GitHub"**
+3. Pega la URL del repositorio que contiene este notebook
+
+### Opción 2: Cargar manualmente
+1. Descarga el archivo `Actividad13.ipynb` de esta carpeta
+2. Abre [Google Colab](https://colab.research.google.com/)
+3. Selecciona **"Archivo"** → **"Subir cuaderno"**
+4. Elige el archivo descargado
+
+### Requisitos
+- NumPy
+- Matplotlib
+- TensorFlow
+- Keras
+
    
