@@ -1,5 +1,6 @@
 # Week14_14
-
+## Integrantes:
+DIEGO ALEJANDRO RUIZ ALFONSO - diegoaruiz@ucundinamarca.edu.co PEDRO PASCUAL MURCIA VARGAS - ppmurcia@ucundinamarca.edu.co JHON EDUARD TINJACA CRUZ - jetinjaca@ucundinamarca.edu.co JULIAN DAVID SILVA GUZMAN - jdsilva@ucundinamarca.edu.co
 readme_content = """# Proyecto DCGAN: Generación de Imágenes (MNIST & Fashion MNIST)
 
 Este proyecto implementa y compara arquitecturas de Redes Neuronales Generativas Adversarias (GAN) para la creación de imágenes sintéticas.
