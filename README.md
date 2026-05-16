@@ -51,4 +51,11 @@ El flujo de trabajo de este notebook se divide en cuatro etapas principales:
     *   **Modularidad**: Uso de la función `train_model` para ejecutar el entrenamiento por lotes (batches).
     *   **Evaluación**: Generación de gráficas de pérdida para monitorear el equilibrio de Nash y uso de `plot_images` para visualizar el progreso visual del modelo tras miles de épocas.
   
+## En la ejecución del código, podemos evidenciar varios puntos clave sobre el comportamiento de tus redes neuronales:
+
+**Convergencia y Estabilidad**: En las gráficas de pérdida, se observa que tras las primeras épocas de inestabilidad, las curvas de pérdida del Generador y el Discriminador entran en una etapa de oscilación controlada. Esto es evidencia del Equilibrio de Nash, donde ambos modelos compiten sin que uno anule por completo al otro.
+**Aprendizaje desde el Ruido**: Al comparar las imágenes 'Sin entrenar' (que son estática pura) con los resultados a las 2000 y 5000 épocas, se evidencia que el Generador ha aprendido a mapear vectores aleatorios a estructuras espaciales con significado (dígitos y ropa).
+**Superioridad de DCGAN sobre MLP**: El código ejecutado demuestra que las capas convolucionales (Conv2DTranspose) mantienen la jerarquía espacial de la imagen, produciendo bordes más nítidos y formas menos borrosas que la versión basada únicamente en capas densas.
+**Capacidad de Generalización**: Al aplicar la misma arquitectura a Fashion MNIST, el código evidencia que la lógica de las DCGAN es versátil y puede adaptarse a diferentes distribuciones de datos (de números a prendas de vestir) ajustando simplemente el flujo de entrada.
+  
    
